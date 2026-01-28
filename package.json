@@ -6,7 +6,7 @@
     "start": "node trackingServer.js"
   },
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.22.1",
+    "mongodb": "^7.0.0"
   }
 }
-
