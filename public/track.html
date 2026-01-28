@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Live Shipment Tracking</title>
+  <style>
+    #map { height: 100vh; width: 100%; }
+  </style>
+</head>
+<body>
+
+  <div id="map"></div>
+
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"
+    async
+    defer
+    onload="initTrackMap()">
+  </script>
+
+  <script>
+    let map;
+    let marker;
+
+    function initTrackMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: { lat: 28.6139, lng: 77.2090 }
+      });
+
+      marker = new google.maps.Marker({ map });
+
+      setInterval(() => {
+        fetch("/api/location")
+          .then(res => res.json())
+          .then(pos => {
+            marker.setPosition(pos);
+            map.panTo(pos);
+          });
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
+

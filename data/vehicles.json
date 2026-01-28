@@ -1,0 +1,10 @@
+[
+  {
+    "id": "TRUCK_01",
+    "speed": 25,
+    "weather": "rain",
+    "traffic": "high",
+    "time": "peak"
+  }
+]
+

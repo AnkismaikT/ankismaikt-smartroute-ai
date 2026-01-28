@@ -1,0 +1,12 @@
+{
+  "name": "ankismaikt-smartroute-ai",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node trackingServer.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
+

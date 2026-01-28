@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AnkismaikT SmartRoute AI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      padding: 10px;
+    }
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>🚚 AnkismaikT SmartRoute AI – Live Map</h1>
+
+  <div id="map"></div>
+
+  <!-- Your app logic -->
+  <script src="dashboard.js"></script>
+
+  <!-- Google Maps -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7KkEuLt0UhGHQrjXfx42Huf8934Gp9QU"
+    async
+    defer
+    onload="initMap()">
+  </script>
+</body>
+</html>
+
